@@ -5,7 +5,13 @@ import os
 import keras
 import sklearn
 import librosa
+import tensorflow as tf
+import warnings
 
+warnings.filterwarnings("ignore")
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+tf.logging.set_verbosity(tf.logging.WARN)
 eps = np.finfo(np.float).eps
 
 if __name__ == '__main__':
